@@ -8,11 +8,22 @@
 
 import SwiftUI
 
+enum Move: String, CaseIterable {
+    case rock = "Rock"
+    case paper = "Paper"
+    case scissors = "Scissors"
+}
+
+enum Mode: String, CaseIterable {
+    case win = "Win"
+    case lose = "Lose"
+}
+
 struct ContentView: View {
     
-    var moves = ["Rock", "Paper", "Scissors"]
+    var moves: [Move] = [.rock, .paper, .scissors]
     let colours: [Color] = [.red, .blue, .black]
-    var modes = ["Win", "Lose"]
+    var modes: [Mode] = [.win, .lose]
     let winCombinations = [1, 2, 0]
     let loseCombinations = [2, 0, 1]
     
@@ -36,13 +47,13 @@ struct ContentView: View {
             VStack(spacing: 40) {
                 Picker("Select to win or lose", selection: $modeChoice) {
                     ForEach(0..<modes.count) {
-                        Text(self.modes[$0])
+                        Text(self.modes[$0].rawValue)
                     }
                 }.pickerStyle(SegmentedPickerStyle())
                     .padding()
                 VStack(spacing: 30) {
                     ForEach(0..<moves.count) { index in
-                        Button(self.moves[index]) {
+                        Button(self.moves[index].rawValue) {
                             self.processScore(with: index)
                             self.playAgainButtonDisabled.toggle()
                         }
@@ -57,9 +68,12 @@ struct ContentView: View {
                 Text("Score: \(score)")
                     .font(.largeTitle)
                     .padding(30)
+                Text("The app selected: \(moves[appChoice].rawValue)")
+                    .font(.title)
+                    .opacity(playAgainButtonDisabled ? 0 : 1)
                 VStack(spacing: 6) {
-                    Text("App's Selection: \(moves[appChoice])")
-                    Text("PlayerModeChoice: \(modes[modeChoice])")
+                    Text("App's Selection: \(moves[appChoice].rawValue)")
+                    Text("PlayerModeChoice: \(modes[modeChoice].rawValue)")
                 }
                 .opacity(debug ? 1 : 0)
                 Text(roundEndMessage)

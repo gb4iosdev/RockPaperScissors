@@ -13,6 +13,7 @@
 		860C86A924BA7551007BBEF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860C86A824BA7551007BBEF6 /* Assets.xcassets */; };
 		860C86AC24BA7551007BBEF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860C86AB24BA7551007BBEF6 /* Preview Assets.xcassets */; };
 		860C86AF24BA7551007BBEF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860C86AD24BA7551007BBEF6 /* LaunchScreen.storyboard */; };
+		86C6D84824BBBDD200012D08 /* RockPaperScissors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6D84724BBBDD200012D08 /* RockPaperScissors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		860C86AB24BA7551007BBEF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		860C86AE24BA7551007BBEF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		860C86B024BA7551007BBEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86C6D84724BBBDD200012D08 /* RockPaperScissors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				860C86A224BA7550007BBEF6 /* AppDelegate.swift */,
 				860C86A424BA7550007BBEF6 /* SceneDelegate.swift */,
 				860C86A624BA7550007BBEF6 /* ContentView.swift */,
+				86C6D84724BBBDD200012D08 /* RockPaperScissors.swift */,
 				860C86A824BA7551007BBEF6 /* Assets.xcassets */,
 				860C86AD24BA7551007BBEF6 /* LaunchScreen.storyboard */,
 				860C86B024BA7551007BBEF6 /* Info.plist */,
@@ -148,6 +151,7 @@
 			files = (
 				860C86A324BA7550007BBEF6 /* AppDelegate.swift in Sources */,
 				860C86A524BA7550007BBEF6 /* SceneDelegate.swift in Sources */,
+				86C6D84824BBBDD200012D08 /* RockPaperScissors.swift in Sources */,
 				860C86A724BA7550007BBEF6 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
